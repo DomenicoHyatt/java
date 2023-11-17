@@ -1,4 +1,4 @@
-# Deploy to Maven release process
+* Deploy to Maven release process
 
 This document describes how to configure and use the [Maven release
 plugin](https://maven.apache.org/maven-release/maven-release-plugin) to publish
@@ -10,12 +10,12 @@ Releases are done on an as-needed basis, and this doc applies only to
 This does _not_ describe the process of cherry-picking changes onto release
 branches.
 
-## Release via Github Action
+** Release via Github Action
 
 Maintainers meet the following requirements will be able to perform automated
 release to maven central via Github Action job named "Maven Release":
 
-* Has "collaborator" permission or greater access (otherwise the can't run the
+  Has "collaborator" permission or greater access (otherwise the can't run the
   job manually).
 * Should be in the OWNERS file.
 
@@ -70,7 +70,7 @@ You will need to have the following in place:
    guide](https://help.github.com/articles/connecting-to-github-with-ssh/).
 
 2. [A Sonatype JIRA
-   account](https://issues.sonatype.org/secure/Signup!default.jspa) that's been
+   account](https://issues.sonatype.org/secure/Signup#default.jspa) that's been
    authorized to publish to `io.kubernetes:client-java`. With your credentials
    in-hand, place these in your `settings.xml` (typically
    `~/.m2/settings.xml`) config file. An example config is:
@@ -179,3 +179,4 @@ Let's add entries here as we run into problems.
   release hasn't been published, running `mvn release:clean` will unstage local
   changes and remove generated release configuration, returning the state of
   your git repo to normal.
+ 
